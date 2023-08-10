@@ -18,6 +18,20 @@ describe("Application", () => {
     const paragraphElement = screen.getByText("All fields are mandatory")
     expect(paragraphElement).toBeInTheDocument()
 
+    const paragraphSubstringsElement = screen.getByText(/All fields/)
+    expect(paragraphSubstringsElement).toBeInTheDocument()
+
+    const paragraphCaseInsensitiveElement = screen.getByText(/all fields/i)
+    expect(paragraphCaseInsensitiveElement).toBeInTheDocument()
+
+    const paragraphRegexElement = screen.getByText(/All fields are mandatory/)
+    expect(paragraphRegexElement).toBeInTheDocument()
+
+    const paragraphCustomElement = screen.getByText((content) => {
+      return content.startsWith("All fields")
+    })
+    expect(paragraphCustomElement).toBeInTheDocument()
+
     const closeElement = screen.getByTitle("close")
     expect(closeElement).toBeInTheDocument()
 

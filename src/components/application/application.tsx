@@ -8,7 +8,7 @@ export const Application = () => {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input id="name" type="text" />
+          <input id="name" type="text" placeholder="Fullname" />
         </div>
         <div>
           <label htmlFor="bio">Bio</label>

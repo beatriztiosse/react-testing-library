@@ -1,10 +1,11 @@
 import './App.css';
-import { Application } from './components/application/application';
+import { Skills } from './components/skills/skills';
 
 function App() {
+  const skills = ["React", "TypeScript", "Jest", "Cypress"]
   return (
     <div className="App">
-      <Application />
+      <Skills skills={skills} />
     </div>
   );
 }

@@ -24,12 +24,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint --ignore-path .gitignore . --fix",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
     "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:eslint-plugin-jest-dom/recommended",
+      "eslint-config-prettier"
     ]
   },
   "browserslist": {
@@ -55,6 +59,9 @@
     }
   },
   "devDependencies": {
-    "msw": "^1.2.3"
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest-dom": "^5.0.2",
+    "msw": "^1.2.3",
+    "prettier": "3.0.1"
   }
 }

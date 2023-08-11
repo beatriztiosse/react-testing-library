@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import { users as usersMock } from '../../utils/mocks/users'
+import { users as usersMock } from "../../utils/mocks/users"
 import { Users } from "./users"
 import { server } from "../../mocks/server"
 import { rest } from "msw"
@@ -17,12 +17,11 @@ describe("Users", () => {
     expect(users).toHaveLength(usersMock.length)
   })
 
-  test('renders error', async () => {
+  test("renders error", async () => {
     server.use(
-      rest.get(
-        'https://jsonplaceholder.typicode.com/users', 
-        (req, res, ctx) => res(ctx.status(500)) 
-      )
+      rest.get("https://jsonplaceholder.typicode.com/users", (req, res, ctx) =>
+        res(ctx.status(500)),
+      ),
     )
     render(<Users />)
     const error = await screen.findByText("Error fetching users")

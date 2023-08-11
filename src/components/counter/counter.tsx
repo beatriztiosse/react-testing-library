@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 export const Counter = () => {
   const [count, setCount] = useState(0)
@@ -7,11 +7,13 @@ export const Counter = () => {
     <div>
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>Increment</button>
-      <input 
+      <input
         type="number"
         name="amount"
         value={amount}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setAmount(parseInt(e.target.value))}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setAmount(parseInt(e.target.value))
+        }
       />
       <button onClick={() => setCount(amount)}>Set</button>
     </div>

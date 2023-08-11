@@ -11,7 +11,7 @@ describe("Counter", () => {
     const incrementButton = screen.getByRole("button", {
       name: "Increment",
     })
-    expect(incrementButton).toBeInTheDocument()    
+    expect(incrementButton).toBeInTheDocument()
   })
 
   test("renders a count of 0", () => {

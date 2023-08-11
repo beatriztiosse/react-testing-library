@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 export const Application = () => {
   return (
@@ -12,11 +12,11 @@ export const Application = () => {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input 
-            id="name" 
-            type="text" 
-            placeholder="Fullname" 
-            value="Beatriz" 
+          <input
+            id="name"
+            type="text"
+            placeholder="Fullname"
+            value="Beatriz"
             onChange={() => {}}
           />
         </div>
@@ -37,10 +37,11 @@ export const Application = () => {
         </div>
         <div>
           <label>
-            <input type="checkbox" id="terms" /> I agree to the terms and conditions
+            <input type="checkbox" id="terms" /> I agree to the terms and
+            conditions
           </label>
         </div>
-        <button>Submit</button>
+        <button disabled>Submit</button>
       </form>
     </>
   )

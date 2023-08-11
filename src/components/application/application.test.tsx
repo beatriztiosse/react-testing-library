@@ -42,12 +42,12 @@ describe("Application", () => {
     expect(customElement).toBeInTheDocument()
 
     const nameElement = screen.getByRole("textbox", {
-      name: 'Name'
+      name: "Name",
     })
     expect(nameElement).toBeInTheDocument()
 
     const nameLabelElement = screen.getByLabelText("Name", {
-      selector: 'input'
+      selector: "input",
     })
     expect(nameLabelElement).toBeInTheDocument()
 
@@ -58,7 +58,7 @@ describe("Application", () => {
     expect(nameValueElement).toBeInTheDocument()
 
     const bioElement = screen.getByRole("textbox", {
-      name: 'Bio'
+      name: "Bio",
     })
     expect(bioElement).toBeInTheDocument()
 
@@ -68,10 +68,13 @@ describe("Application", () => {
     const termsElement = screen.getByRole("checkbox")
     expect(termsElement).toBeInTheDocument()
 
-    const termsLabelElement = screen.getByLabelText("I agree to the terms and conditions")
+    const termsLabelElement = screen.getByLabelText(
+      "I agree to the terms and conditions",
+    )
     expect(termsLabelElement).toBeInTheDocument()
 
     const submitElement = screen.getByRole("button")
     expect(submitElement).toBeInTheDocument()
+    expect(submitElement).toBeDisabled()
   })
 })

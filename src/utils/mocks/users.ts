@@ -1,11 +1,11 @@
 export const users = [
   {
-    name: 'John Doe',
+    name: "John Doe",
   },
   {
-    name: 'Jane Doe',
+    name: "Jane Doe",
   },
   {
-    name: 'Jordan Doe',
-  }
+    name: "Jordan Doe",
+  },
 ]

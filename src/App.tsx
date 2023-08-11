@@ -1,12 +1,12 @@
 import './App.css';
-import { MuiMode } from './components/mui/mui-mode';
+import { Users } from './components/users/users';
 import { AppProviders } from './providers/app-providers';
 
 function App() {
   return (
     <AppProviders>
       <div className="App">
-        <MuiMode />
+        <Users />
       </div>
     </AppProviders>
   );

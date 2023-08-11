@@ -8,16 +8,15 @@ describe('useCounter', () => {
   })
 
   test('should accept and render the same initial count', () => {
-    const { result } = renderHook(useCounter, { initialProps: { initialCount: 10 } })
-    expect(result.current.count).toBe(10)
+    const initialCount = 10
+    const { result } = renderHook(useCounter, { initialProps: { initialCount } })
+    expect(result.current.count).toBe(initialCount)
   })
 
   test('should increment the count', () => {
     const { result } = renderHook(useCounter)
 
-    act(() => {
-      result.current.increment()
-    })
+    act(() => result.current.increment())
     expect(result.current.count).toBe(1)
   })
 
@@ -25,9 +24,7 @@ describe('useCounter', () => {
     const initialCount = 10
     const { result } = renderHook(useCounter, { initialProps: { initialCount } })
 
-    act(() => {
-      result.current.decrement()
-    })
+    act(() => result.current.decrement())
     expect(result.current.count).toBe(initialCount - 1)
   })
 })
